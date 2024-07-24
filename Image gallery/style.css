@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #191919;
+}
+
+.gallery-wrap{
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+
+.gallery{
+    width: 900px;
+    height:350px;
+    display: flex;
+gap: 20px;
+overflow-x: scroll;
+}
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-gap:20px ;
+flex: none;
+  
+}
+
+.gallery div img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    filter: grayscale(100%);
+    transition: .5s all ease-in-out;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+
+}
+
+.gallery::-webkit-scrollbar{
+    display: none;
+}
+.scr-btn{
+    border: 2px solid rgba(255, 0, 0, 0.459);
+    height: 50px;
+    width: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+    border-radius: 20%;
+    margin: 5px;
+}
+
+.scr-btn:hover{
+    background-color: rgba(255, 0, 0, 0.659);
+    box-shadow: inset 4px 4px 2px  rgba(94,34,34,.404), inset -4px -4px 2px rgba(94, 34, 34, 0.414), 0px 0px 0px 3px rgba(94, 34, 34, 0.414)
+}
+
+
+
+.prevbtn , .nextbtn{
+     color: #ffffff;
+    font-size: 30px;
+     cursor: pointer;
+}
+
